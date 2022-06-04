@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Tic Tac Toe Game">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatoble" content="ie=edge">
+
+        <!-- css file -->
+        <link rel="stylesheet" type="text/css" href="style/style.css">
+        <title>Tic Tac Toe</title>
+    </head>
+
+    <header>
+        <h2>Tic Tac Toe Game</h2>
+
+        <div class="setup">
+            <div id="player1">
+                <label for="p1_name">Player 1 name:</label>
+                <input type="text" id="p1_name" placeholder="Enter Player 1 Name"><br><br>
+                <label for="p1_color">Color:</label>
+                <input type="color" id="p1_color" value="#990000">
+            </div>
+
+            <div id="player2">
+                <label for="p2_name">Player 2 name:</label>
+                <input type="text" id="p2_name" placeholder="Enter Player 2 Name"><br><br>
+                <label for="p2_color">Color:</label>
+                <input type="color" id="p2_color" value="#000080">
+            </div>
+
+            <br><br><br><br><br>
+
+            <div id="rowcol_setup">
+                <label for="selSize">Board Size:</label>
+                <select id="selSizeValue">
+                    <option value="3">3x3</option>
+                    <option value="4">4x4</option>
+                    <option value="5">5x5</option>
+                    <option value="6">6x6</option>
+                    <option value="7">7x7</option>
+                </select>
+
+                <br><br>
+                <input type="button" id="startBtn" value="Start Game" onclick="setupGame()"/>
+            </div>
+        </div>
+    </header>
+
+    <body> 
+        <div id="greeting"></div>
+        <br><br><br>
+        <div class="board" id="board">Please select your game from above, then press 'Start Game'.</div>
+        <br><br>
+    </body>
+
+    <footer>
+        <br>
+
+        <div id="turn">
+            <span id="p_turn"></span>
+            <br>
+            <span id="p_timer"></span>
+        </div>
+        <br><br>
+        <div id="score"></div>
+
+        <br>
+
+        <input type="button" id="againBtn" value="Play Again" onClick="again()"/>
+        <input type="button" id="resetBtn" value="Reset Game" onClick="reset()"/>
+    </footer>
+
+    <!-- js file -->
+    <script type="text/javascript" src="js/game.js"></script>
+</html>
